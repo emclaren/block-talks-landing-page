@@ -111,9 +111,9 @@ a {
 
     border-bottom: none;
     background: transparent;
-      a {
-    color:white;
-  }
+    a {
+      color:white;
+    }
 
     &.navbar-shrink {
       padding-top: 10px;
@@ -122,8 +122,8 @@ a {
       border-bottom: 1px solid fade-out(white, .7);
       background: white;
       a {
-    color:black ;
-  }
+        color:black ;
+      }
     }
     .nav-link.active {
       outline: none;
@@ -137,20 +137,21 @@ a {
 
 .masthead {
   display: table;
-
+  margin-top:50px;
   width: 100%;
   height: auto;
-  padding: 200px 0;
+  padding: 100px 0;
 
   text-align: center;
 
   color: white;
-  background: url('../img/intro-bg.jpg') no-repeat bottom center scroll;
-  background-color: black;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: url('../img/intro-bg.jpg') no-repeat scroll;
+  // background-color: black;
+  //   -webkit-background-size: contain;
+  // -moz-background-size: contain;
+  // -o-background-size: contain;
+  background-size: 100% ;
+
   .intro-body {
     display: table-cell;
 
@@ -162,7 +163,11 @@ a {
       font-size: 18px;
     }
   }
+  @media(min-width:500px) {
+ padding: 175px 0;
+  }
   @media(min-width:768px) {
+  padding: 200px 0;
     height: 100%;
     padding: 0;
     .intro-body {
@@ -174,40 +179,62 @@ a {
       }
     }
   }
+  @media(min-width:992px) {
+    margin-top:0;
+    background: url('../img/intro-bg.jpg') no-repeat bottom center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+  }
 }
 
 .btn-circle {
-  font-size: 26px;
+  display:none;
+  @media(min-width:992px){
+    display:inline-block;
+    font-size: 26px;
 
-  width: 55px;
-  height: 55px;
-  margin-top: 15px;
-  line-height: 38px;
+    width: 55px;
+    height: 55px;
+    margin-top: 600px;
+    line-height: 38px;
 
-  -webkit-transition: background 0.3s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out;
 
-  color: white;
-  border: 2px solid white;
-  border-radius: 100% !important;
-  background: transparent;
-  &:focus,
-  &:hover {
     color: white;
-    outline: none;
-    background: fade-out(white, .9);
+    border: 2px solid white;
+    border-radius: 100% !important;
+    background: transparent;
+    &:focus,
+    &:hover {
+      color: white;
+      outline: none;
+      background: fade-out(white, .9);
+    }
   }
 }
 
 .content-section {
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding-top: 50px;
+  padding-bottom: 100px;
 }
 
 .download-section {
   color: white;
   background: url('../img/downloads-bg.jpg') no-repeat center center scroll;
+  background-color: black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.contact-section {
+  color: white;
+  // background: url('../img/downloads-bg.jpg') no-repeat center center scroll;
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -221,8 +248,8 @@ a {
 }
 @media(min-width:992px) {
   .content-section {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 150px;
+    padding-bottom: 150px;
   }
   #map {
     height: 350px;
@@ -303,4 +330,14 @@ img::-moz-selection {
 
 body {
   -webkit-tap-highlight-color: fade-out(white, .8);
+}
+h3{
+  // font-size: 30px;
+  color:f2f2f2;
+text-transform: none;
+
+}
+
+.team-content{
+  background-color: rgba(229,229,229,0.3);
 }
