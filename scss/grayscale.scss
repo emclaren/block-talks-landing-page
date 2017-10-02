@@ -328,6 +328,9 @@ img::-moz-selection {
   background: transparent;
 }
 
+img{
+  max-width:100%;
+}
 body {
   -webkit-tap-highlight-color: fade-out(white, .8);
 }
@@ -341,3 +344,5 @@ text-transform: none;
 .team-content{
   background-color: rgba(229,229,229,0.3);
 }
+
+
